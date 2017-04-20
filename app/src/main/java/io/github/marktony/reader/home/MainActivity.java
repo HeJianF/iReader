@@ -20,7 +20,6 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
@@ -30,6 +29,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.concurrent.ExecutionException;
 
+import io.github.marktony.reader.NewToast;
 import io.github.marktony.reader.R;
 import io.github.marktony.reader.util.HttpUtil;
 import okhttp3.Call;
@@ -88,11 +88,11 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.nac_save_BingPic:
                         loadBitMap();
                         drawerLayout.closeDrawers();
-                        Toast.makeText(MainActivity.this, "图片保存成功！", Toast.LENGTH_SHORT).show();
+                        NewToast.toast(MainActivity.this,R.drawable.mai_meng, "背景图片保存成功！");
                         break;
                     case R.id.nac_newBic:
                         loadBingPic();
-                        Toast.makeText(MainActivity.this, "背景图片每天只能换一次奥！", Toast.LENGTH_SHORT).show();
+                        NewToast.toast(MainActivity.this,R.drawable.tuo_sai, "背景图片每天只能换一次奥！");
                         break;
                     default:
                         break;
@@ -160,6 +160,7 @@ public class MainActivity extends AppCompatActivity {
             public void onFailure(Call call, IOException e) {
                 e.printStackTrace();
             }
+
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 bingPic = response.body().string();
