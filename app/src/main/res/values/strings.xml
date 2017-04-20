@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">段子</string>
+    <string name="MyName">何建峰</string>
+    <string name="hjfstory_fox_mail">hjfstory@fox.mail</string>
 </resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="首页"/>
+        <item
+            android:id="@+id/nav_myJoy"
+            android:icon="@drawable/ic_my_joy"
+            android:title="我的幽默"/>
+        <item
+            android:id="@+id/nac_newBic"
+            android:icon="@drawable/ic_collect"
+            android:title="刷新背景"/>
+        <item
+            android:id="@+id/nac_save_BingPic"
+            android:icon="@drawable/ic_pic_download"
+            android:title="保存背景图片"/>
+        <item
+            android:id="@+id/nav_thisApp"
+            android:icon="@drawable/ic_this_app"
+            android:title="关于段子"/>
+        <item
+            android:id="@+id/nav_author"
+            android:icon="@drawable/about_me"
+            android:title="关于作者"/>
+
+    </group>
+</menu>
