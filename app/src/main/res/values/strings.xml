@@ -1,5 +1,27 @@
 <resources>
-    <string name="app_name">段子</string>
+    <string name="app_name">幽你一默</string>
     <string name="MyName">何建峰</string>
     <string name="hjfstory_fox_mail">hjfstory@fox.mail</string>
+    <string name="about_me">关于我</string>
+    <string name="one_word">无冥冥之志者，无昭昭之明\n无惛惛之事者，无赫赫之功</string>
+    <string name="app_info">幽你一默</string>
+    <string name="desc"> * 糗事百科，煎蛋，内涵段子</string>
+    <string name="desc_api_zhihu"> * 糗事百科 Api 来自网络</string>
+    <string name="desc_api_gank"> * 煎蛋 Api 来自网络</string>
+    <string name="desc_api_daily"> * 内涵段子 Api 来自网络</string>
+    <string name="desc_dev"> * 整体开发基于 MVP+Volley+Material Design</string>
+    <string name="app_dev">开发</string>
+    <string name="desc_dev_1"> * 通过 Volle 实现了网络请求，其中背景图片加载用到是Okhttp</string>
+    <string name="desc_dev_2"> * 基于 MVP 模式</string>
+    <string name="desc_dev_3"> * 使用Glide加载背景图片</string>
+    <string name="app_me">关于我</string>
+    <string name="me_1"> * 武汉的同学们可以来找我玩</string>
+    <string name="me_2"> * 喜欢的事很多 : 摄像，写作，撸代码，看片</string>
+    <string name="me_3"> * 喜欢玩游戏：Dota2 LOL 可以联系我一起开黑 :)</string>
+    <string name="app_content">联系我</string>
+    <string name="splash_info">In fact you really amazing</string>
+    <string name="api_info">以上api只用做学习用途，如有冒犯请联系我删除。</string>
+    <string name="https_github_com_hejianf">https://github.com/HeJianF</string>
+    <string name="github">* GitHub :</string>
+    <string name="email">* Email :</string>
 </resources>

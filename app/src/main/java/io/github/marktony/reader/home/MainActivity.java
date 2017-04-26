@@ -32,6 +32,10 @@ import java.util.concurrent.ExecutionException;
 import io.github.marktony.reader.NewToast;
 import io.github.marktony.reader.R;
 import io.github.marktony.reader.util.HttpUtil;
+import io.github.marktony.reader.withnav.AboutAuthor;
+import io.github.marktony.reader.withnav.AboutThisApp;
+import io.github.marktony.reader.withnav.BingSearch;
+import io.github.marktony.reader.withnav.MyHumor;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Response;
@@ -42,17 +46,20 @@ import static com.bumptech.glide.Glide.with;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ImageView bingPicImg;
-    private ImageView navBingPicImg;
+    public static ImageView bingPicImg;
+    public static ImageView navBingPicImg;
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
-    private String bingPic;
+    public static String bingPic;
+    private Toolbar toolbar;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //全屏化,未达到要求
+
+
+        //APP全屏化
         if (Build.VERSION.SDK_INT >= 21) {
             View decorView = getWindow().getDecorView();
             decorView.setSystemUiVisibility(
@@ -68,8 +75,15 @@ public class MainActivity extends AppCompatActivity {
 
         //对抽屉中item的管理
         navItem();
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
-        setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
+        //显示toolbar左边图标
+       /* ActionBar actionBar = getSupportActionBar();
+        if(actionBar != null){
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setHomeAsUpIndicator(R.drawable.ic_menu);
+        }*/
         //加载图片
         loadBIngPicture();
 
@@ -85,15 +99,35 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.nav_home:
                         drawerLayout.closeDrawers();
                         break;
-                    case R.id.nac_save_BingPic:
-                        loadBitMap();
+                    case R.id.nav_myJoy:
+                        Intent intent0 = new Intent(MainActivity.this, MyHumor.class);
+                        startActivity(intent0);
                         drawerLayout.closeDrawers();
-                        NewToast.toast(MainActivity.this,R.drawable.mai_meng, "背景图片保存成功！");
                         break;
                     case R.id.nac_newBic:
                         loadBingPic();
-                        NewToast.toast(MainActivity.this,R.drawable.tuo_sai, "背景图片每天只能换一次奥！");
+                        drawerLayout.closeDrawers();
+                        NewToast.toast(MainActivity.this, R.drawable.tuo_sai, "背景图片每天只能换一次奥！");
                         break;
+                    case R.id.nav_search:
+                        Intent intent1 = new Intent(MainActivity.this, BingSearch.class);
+                        startActivity(intent1);
+                        drawerLayout.closeDrawers();
+                        break;
+                    case R.id.nac_save_BingPic:
+                        loadBitMap();
+                        drawerLayout.closeDrawers();
+                        NewToast.toast(MainActivity.this, R.drawable.mai_meng, "背景图片保存成功！");
+                        break;
+                    case R.id.nav_thisApp:
+                        Intent intent2 = new Intent(MainActivity.this, AboutThisApp.class);
+                        startActivity(intent2);
+                        drawerLayout.closeDrawers();
+                        break;
+                    case R.id.nav_author:
+                        Intent intent3 = new Intent(MainActivity.this, AboutAuthor.class);
+                        startActivity(intent3);
+                        drawerLayout.closeDrawers();
                     default:
                         break;
                 }

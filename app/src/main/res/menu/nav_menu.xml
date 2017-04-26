@@ -14,6 +14,10 @@
             android:icon="@drawable/ic_collect"
             android:title="刷新背景"/>
         <item
+            android:id="@+id/nav_search"
+            android:icon="@drawable/ic_search"
+            android:title="背景图片相关"/>
+        <item
             android:id="@+id/nac_save_BingPic"
             android:icon="@drawable/ic_pic_download"
             android:title="保存背景图片"/>
