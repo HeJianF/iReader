@@ -58,10 +58,10 @@ public class JiandanPresenter implements JiandanContract.Presenter, OnStringList
     @Override
     public void shareTo(int position) {
         try {
-            Intent i = new Intent().setAction(Intent.ACTION_SEND).setType("text/plain");
+            Intent intent = new Intent().setAction(Intent.ACTION_SEND).setType("text/plain");
             String text = jiandanArticles.get(position).getComment_content();
-            i.putExtra(Intent.EXTRA_TEXT, text);
-            context.startActivity(Intent.createChooser(i,"分享至"));
+            intent.putExtra(Intent.EXTRA_TEXT, text);
+            context.startActivity(Intent.createChooser(intent,"分享至"));
         } catch (ActivityNotFoundException ex){
             Toast.makeText(context, "没有可以分享的App", Toast.LENGTH_SHORT).show();
         }

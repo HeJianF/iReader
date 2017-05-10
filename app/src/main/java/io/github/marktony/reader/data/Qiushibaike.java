@@ -62,14 +62,14 @@ public class Qiushibaike {
         private String tag;
         private String image_size;
         private long id;
-        private long created_at;
-        private String content;
+        private long created_at;  //用
+        private String content;   //用
         private String state;
         private int comments_count;
         private boolean allow_comment;
         private int share_count;
         private String type;
-        private User user;
+        private User user;  //用
         private Votes votes;
 
 
@@ -203,7 +203,7 @@ public class Qiushibaike {
         private String state;
         private String last_device;
         private String role;
-        private String login;
+        private String login; //用
         private int id;
         private String icon;
 

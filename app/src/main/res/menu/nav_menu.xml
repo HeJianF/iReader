@@ -24,7 +24,7 @@
         <item
             android:id="@+id/nav_thisApp"
             android:icon="@drawable/ic_this_app"
-            android:title="关于段子"/>
+            android:title="关于本应用"/>
         <item
             android:id="@+id/nav_author"
             android:icon="@drawable/about_me"

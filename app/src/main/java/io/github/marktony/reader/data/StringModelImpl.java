@@ -36,5 +36,4 @@ public class StringModelImpl {
         VolleySingleton.getVolleySingleton(context).addToRequestQueue(request);
     }
 
-
 }

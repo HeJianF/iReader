@@ -22,7 +22,7 @@ import io.github.marktony.reader.interfaze.OnRecyclerViewLongClickListener;
 
 /**
  * Created by Lizhaotailang on 2016/8/5.
- *
+ * <p>
  * 对煎蛋界面的操作，创建view，加载内容等
  */
 
@@ -105,7 +105,7 @@ public class JiandanFragment extends Fragment
     @Override
     public void showResult(ArrayList<Jiandan.Comment> articleList) {
 
-        //若adapter还为创建则为null，进行创建，若已经创建过了，则不要再次进行创建了，解约资源
+        //若adapter还为创建则为null，进行创建，若已经创建过了，则不要再次进行创建了，节约资源
         if (adapter == null) {
             adapter = new JiandanArticleAdapter(getActivity(), articleList);
             recyclerView.setAdapter(adapter);

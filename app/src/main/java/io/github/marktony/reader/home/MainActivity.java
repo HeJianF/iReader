@@ -16,7 +16,6 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -31,16 +30,15 @@ import java.util.concurrent.ExecutionException;
 
 import io.github.marktony.reader.NewToast;
 import io.github.marktony.reader.R;
+import io.github.marktony.reader.note.NoteActivity;
 import io.github.marktony.reader.util.HttpUtil;
 import io.github.marktony.reader.withnav.AboutAuthor;
 import io.github.marktony.reader.withnav.AboutThisApp;
 import io.github.marktony.reader.withnav.BingSearch;
-import io.github.marktony.reader.withnav.MyHumor;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Response;
 
-import static android.R.attr.bitmap;
 import static android.R.attr.path;
 import static com.bumptech.glide.Glide.with;
 
@@ -100,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
                         drawerLayout.closeDrawers();
                         break;
                     case R.id.nav_myJoy:
-                        Intent intent0 = new Intent(MainActivity.this, MyHumor.class);
+                        Intent intent0 = new Intent(MainActivity.this, NoteActivity.class);
                         startActivity(intent0);
                         drawerLayout.closeDrawers();
                         break;
@@ -145,9 +143,8 @@ public class MainActivity extends AppCompatActivity {
 
     //保存图片
     public static void saveImageToGallery(Context context, Bitmap bmp) {
-        Log.d("main", "saveImageToGallery: " + bitmap);
         // 首先保存图片
-        File appDir = new File(Environment.getExternalStorageDirectory(), "DuanZi");
+        File appDir = new File(Environment.getExternalStorageDirectory(), "BingPic");
         if (!appDir.exists()) {
             appDir.mkdir();
         }
@@ -184,7 +181,6 @@ public class MainActivity extends AppCompatActivity {
         } else {
             loadBingPic();
         }
-
     }
 
     public void loadBingPic() {

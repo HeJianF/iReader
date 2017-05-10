@@ -90,7 +90,7 @@ public class Neihanduanzi {
         private Group group;
         private Ad ad;
         private int type;
-        private double display_time;
+        private double display_time;   //用
         private double online_time;
         private ArrayList<Comment> comments;
 
@@ -145,7 +145,7 @@ public class Neihanduanzi {
 
     public class Group {
 
-        private String text;
+        private String text;    //用
         private String neihan_hot_start_time;
         private ArrayList<DislikeReason> dislike_reason;
         private long create_time;
@@ -569,7 +569,7 @@ public class Neihanduanzi {
     public class User {
 
         private long user_id;
-        private String name;
+        private String name;  //用
         private int followings;
         private int ugc_count;
         private String avatar_url;

@@ -29,7 +29,8 @@ public class JokePageFragment extends Fragment {
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_main, container, false);
         ViewPager viewPager = (ViewPager) view.findViewById(R.id.view_pager);
@@ -39,5 +40,4 @@ public class JokePageFragment extends Fragment {
         tabLayout.setupWithViewPager(viewPager);
         return view;
     }
-
 }
